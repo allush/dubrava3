@@ -1,0 +1,11 @@
+version: '3'
+services:
+  frontend:
+    image: node:10
+    container_name: frontend.dubrava3.dev
+    working_dir: /app
+    entrypoint: 'yarn dev'
+    volumes:
+      - ../../frontend:/app
+    ports:
+      - "80:3000"
